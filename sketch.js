@@ -7,11 +7,6 @@ var c2 = '#FFFFFF';
 var propor = 0.75;
 
 
-function preload() {
-  img = loadImage('/images/fundo.png');
-}
-
-
 function setup() {
   
   var h = windowHeight/0.75;
