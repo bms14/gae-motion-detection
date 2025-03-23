@@ -1,9 +1,16 @@
 var video;
+var img;
 var scaler = 4;
 var preFrame;
 var c1 = '#1C4DA1';
 var c2 = '#FFFFFF';
 var propor = 0.75;
+
+
+function preload() {
+  img = loadImage('/images/fundo.png');
+}
+
 
 function setup() {
   
@@ -13,7 +20,7 @@ function setup() {
   
   pixelDensity(3);
   video = createCapture(VIDEO);
-  video.size(width / scaler, height / scaler);
+  video.size(width, height );
   video.hide();
   preFrame = createImage(video.width, video.height);
   background(c1);
@@ -21,13 +28,16 @@ function setup() {
 
 function draw() {
   
-  print(width);
+  image(video, 0,0);
+
+
+   /*  print(width);
   translate(width, 0);
   scale(-1, 1);
   video.loadPixels();
   preFrame.loadPixels();
   
-     let grid = 2;
+   let grid = 2;
 
   for (let y = 0; y < video.height; y+=grid) {
     for (let x = 0; x < video.width; x+=grid) {
@@ -64,8 +74,8 @@ function draw() {
       line (cornerx, cornery+d, centeruno, centerdos);
       
       //rect(x * scaler, y * scaler, scaler, scaler);
-    }
-  }
+    } 
+  }*/
 
     preFrame.copy(video, 0, 0, video.width, video.height, 0, 0, video.width, video.height);
 

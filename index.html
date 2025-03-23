@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
 
-  </head>
-  <body>
-    <img src="images/teste_mentorados_parapar2425.png" alt="">
-    <script src="sketch.js"></script>
-  </body>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <img id="img" src="images/gae_1.svg" alt="Imagem">
+
+  <script>
+    window.onload = function () {
+      var img = document.getElementById("img");
+      var imagemInicial = "images/gae_1.svg"; // Guarda a imagem inicial
+      var timeout;
+
+      document.addEventListener("keypress", function (event) {
+        console.log("Tecla pressionada: ", event.key);
+
+        switch (event.key) {
+          case "0":
+            img.src = "images/gae_1.svg";
+            break;
+          case "1":
+            img.src = "images/prov_1.svg";
+            break;
+          case "2":
+            img.src = "images/prov_2.svg";
+            break;
+          case "3":
+            img.src = "images/psic_1.svg";
+            break;
+          case "4":
+            img.src = "images/par_2.svg";
+            break;
+          case "5":
+            img.src = "images/gae_2.svg";
+            break;
+          case "6":
+            img.src = "images/psic_2.svg";
+            break;
+          case "7":
+            img.src = "images/par_1.svg";
+            break;
+          case "8":
+            img.src = "images/emp_2.svg";
+            break;
+          case "9":
+            img.src = "images/emp_1.svg";
+            break;
+          default:
+            img.src = "images/images/gae_1.svg";
+        }
+
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function () {
+          img.src = imagemInicial;
+          console.log("Imagem restaurada para a inicial.");
+        }, 20000);
+      });
+    };
+  </script>
+  
+  <script src="sketch.js"></script>
+</body>
 </html>
