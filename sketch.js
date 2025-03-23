@@ -23,8 +23,8 @@ function setup() {
 
 function draw() {
   
-  image(video, 0,0);
-
+  scale(-1,1);
+  image(video, -width,0);
 
    /*  print(width);
   translate(width, 0);
