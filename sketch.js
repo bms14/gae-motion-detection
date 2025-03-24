@@ -11,7 +11,7 @@ function setup() {
   
   var h = windowHeight/0.75;
   
-  createCanvas(h, windowHeight);
+  createCanvas(windowWidth, windowHeight);
   
   pixelDensity(3);
   video = createCapture(VIDEO);
