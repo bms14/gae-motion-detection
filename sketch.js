@@ -14,7 +14,6 @@ function setup() {
   video = createCapture(VIDEO);
   video.size(windowWidth, windowHeight); // Ajusta o tamanho do vídeo
   video.hide();
-  preFrame = createImage(video.width, video.height);
   background(c1);
 }
 
