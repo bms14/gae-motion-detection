@@ -15,7 +15,7 @@ function setup() {
   
   pixelDensity(3);
   video = createCapture(VIDEO);
-  video.size(width, height );
+  video.size(width,height);
   video.hide();
   preFrame = createImage(video.width, video.height);
   background(c1);
