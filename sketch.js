@@ -22,9 +22,6 @@ function draw() {
   
   scale(-1,1);
   image(video, -width, 0, width, height);
-
-    preFrame.copy(video, 0, 0, video.width, video.height, 0, 0, video.width, video.height);
-
 }
 
 function windowResized() {
