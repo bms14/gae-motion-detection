@@ -10,9 +10,9 @@ var propor = 0.75;
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight); // Define o canvas do tamanho da tela
+  createCanvas(windowWidth, windowHeight*1.25); // Define o canvas do tamanho da tela
   video = createCapture(VIDEO);
-  video.size(windowWidth, windowHeight); // Ajusta o tamanho do vídeo
+  video.size(windowWidth, windowHeight*1.25); // Ajusta o tamanho do vídeo
   video.hide();
   background(c1);
 }
@@ -20,10 +20,10 @@ function setup() {
 function draw() {
   
   scale(-1,1);
-  image(video, -width, 0, width, height);
+  image(video, -width, 0, windowWidth, windowHeight*1.25);
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  video.size(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight*1.25);
+  video.size(windowWidth, windowHeight*1.25);
 }
