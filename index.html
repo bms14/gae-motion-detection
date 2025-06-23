@@ -11,18 +11,18 @@
 </head>
 
 <body>
-  <img id="img" src="images/gae_1.svg" alt="Imagem" height="100%" width="100%">
+  <img id="img" src="images/comp1.gif" alt="Imagem" height="100%" width="100%">
 
   <script>
     window.onload = function () {
       var img = document.getElementById("img");
-      var imagemInicial = "images/gae_1.svg"; // Guarda a imagem inicial
+      var imagemInicial = "images/comp1.gif"; // Guarda a imagem inicial
       var timeout;
 
       document.addEventListener("keypress", function (event) {
         console.log("Tecla pressionada: ", event.key);
 
-        switch (event.key) {
+        /*switch (event.key) {
           case "0":
             img.src = "images/gae_1.svg";
             break;
@@ -55,7 +55,7 @@
             break;
           default:
             img.src = "images/gae_1.svg";
-        }
+        }*/
 
         clearTimeout(timeout);
 
